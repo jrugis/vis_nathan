@@ -1,0 +1,6 @@
+
+
+ffmpeg -i vis00_stack/vis.%04d.tif -c:v libx264 -preset veryslow -crf 17 vis00.avi
+
+ffmpeg -i vis01_stack/vis.%04d.tif -c:v libx264 -preset veryslow -crf 17 vis01.avi
+
