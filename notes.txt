@@ -1,6 +1,11 @@
 
-
 ffmpeg -i vis00_stack/vis.%04d.tif -c:v libx264 -preset veryslow -crf 17 vis00.avi
-
 ffmpeg -i vis01_stack/vis.%04d.tif -c:v libx264 -preset veryslow -crf 17 vis01.avi
+ffmpeg -i vis01.avi -pix_fmt yuv420p vis01.mp4
+
+ffmpeg -i vis01_stack/vis.%04d.tif -c:v libx264 -preset veryslow -crf 17 -pix_fmt yuv420p vis01.mp4
+ffmpeg -i vis01a_stack/vis.%04d.tif -c:v libx264 -preset veryslow -crf 17 -pix_fmt yuv420p vis01a.mp4
+
+ffmpeg -i vis02_stack/vis02.%04d.tif -c:v libx264 -preset veryslow -crf 17 -pix_fmt yuv420p vis02.mp4
+ffmpeg -i vis02a_stack/vis.%04d.tif -c:v libx264 -preset veryslow -crf 17 -pix_fmt yuv420p vis02a.mp4
 
